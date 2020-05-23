@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>String Guide!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron mt-3">
+            <h1>The Guide to String Gauges!</h1>
+            <hr>
+            <p class="lead">This is a simple app to help guitarist and bass players that want to play on different standard tunning to select witch strings to buy. I hope this helps You. Enjoy it!!</p>
+            <hr>
+            <h2>Guitar</h2>
+          
+            <form>
+             <div class="form-group">
+            <label for="select-guitar">Tuning:</label>
+                <select class="form-control" id="select-guitar">
+                  <option value=""> </option>
+                  <option value="G1">E Standard</option>
+                  <option value="G2">Drop D</option>
+                  <option value="G3">Eb Standard</option>
+                  <option value="G4">Drop C#</option>
+                  <option value="G5">D Standard</option>
+                  <option value="G6">C Standard</option>
+                  <option value="G7">Drop C</option>
+                  <option value="G8">Drop B</option>
+                </select>
+            </div>
+            </form>      
+          
+          <div id="guitar-result">
+            <div class="card">
+              <img class="card-img-top" src="" alt=" Strings Image">
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">
+                </p>
+                <a href="#" class="btn btn-primary" id="card-link" target="_blank"> Buy on <i class="fa fa-amazon"></i></a>
+              </div>
+            </div>
+          </div>
+         <!-- 
+          <hr>
+            <h2>Bass</h2>
+          
+            <form>
+             <div class="form-group">
+            <label for="select-bass">Tuning:</label>
+                <select class="form-control" id="select-bass">
+                  <option value="B1">E Standard, Drop D</option>
+                  <option value="B1">Eb Standard, Drop C#</option>
+                  <option value="B1">D Standard, Drop C</option>
+                  <option value="B1">Drop B</option>
+                </select>
+            </div>
+            </form>    
+          
+          <div id="bass-result"></div>
+        -->
+      </div>
+      
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="credicts.html">Credicts</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Folow me on <i class="fa fa-instagram"></i></a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Folow me on <i class="fa fa-facebook-official"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Folow me on <i class="fa fa-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>  
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      
+        <script>
+        $( document ).ready(function() {
+            
+            $('#select-guitar').on('change', function() {
+                
+                switch(this.value){
+                    case 'G1':
+                         $('#guitar-result .card-title').html("E-A-D-G-B-e");
+                         $('#guitar-result .card-text').html(
+                             'The best fit:<br> 10-46 <small>(Nomal Tension)</small><br>9-42 <small>(Loose Fell)</small>'
+                         );
+                        $('#guitar-result .card-img-top').attr('src','img/ernie-ball-10-46.jpg');
+                        $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Regular-Slinky-Nickel/dp/B00CAV0TRQ/');
+                    break;
+                    case 'G2':
+                         $('#guitar-result .card-title').html("D-A-D-G-B-e");
+                         $('#guitar-result .card-text').html(
+                             'The best fit:<br> 10-52 <small>(Light Top Heavy Bottom)</small>'
+                         );
+                        $('#guitar-result .card-img-top').attr('src','img/ernie-ball-10-52.jpg');
+                        $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Skinny-Bottom-Nickel/dp/B0002PBS68/');
+                    break;
+                    case 'G3':
+                         $('#guitar-result .card-title').html("Eb-Ab-Db-Gb-Bb-eb");
+                         $('#guitar-result .card-text').html(
+                             'The best fit:<br> 10-52 <small>(Tighter Feel On Low Strings)</small>'
+                         );
+                        $('#guitar-result .card-img-top').attr('src','img/ernie-ball-10-52.jpg');
+                        $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Skinny-Bottom-Nickel/dp/B0002PBS68/');
+                    break;
+                    case 'G4':
+                         $('#guitar-result .card-title').html("C#-Ab-Db-Gb-Bb-eb");
+                         $('#guitar-result .card-text').html(
+                             'The best fit:<br> 11-48 +52<small>(Normal Tension)</small>'
+                         );
+                        $('#guitar-result .card-img-top').attr('src','img/ernie-ball-11-48.jpg');
+                        $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Power-Slinky-Nickel/dp/B001NI4M1Q/');
+                    break;
+                    case 'G5':
+                         $('#guitar-result .card-title').html("D-G-C-F-A-D");
+                         $('#guitar-result .card-text').html(
+                             'The best fit:<br> 11-54<small>(Higher Tension)</small>'
+                         );
+                         $('#guitar-result .card-img-top').attr('src','img/ernie-ball-11-54.jpg');
+                        $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Beefy-Slinky-Nickel/dp/B0002E1J5E/');
+                    break;
+                    case 'G6':
+                         $('#guitar-result .card-title').html("C-F-A#-D#-G-C");
+                         $('#guitar-result .card-text').html(
+                             'The best fit:<br> 12-56<small>(Higher Tension)</small><br>11-54 <small>(Loose Fell)</small>'
+                         );
+                         $('#guitar-result .card-img-top').attr('src','img/ernie-ball-12-56.jpg');
+                         $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Slinky-Nickel-Wound/dp/B0002E1J3Q/');
+                    break;
+                    case 'G7':
+                         $('#guitar-result .card-title').html("C-G-C-F-A-D");
+                         $('#guitar-result .card-text').html(
+                             'The best fit:<br> 11-54 +56<small>(Normal Tension)</small>'
+                         );
+                         $('#guitar-result .card-img-top').attr('src','img/ernie-ball-11-54.jpg');
+                         $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Beefy-Slinky-Nickel/dp/B0002E1J5E/');
+                    break;
+                    case 'G8':
+                         $('#guitar-result .card-title').html("B-F#-B-E-G#-C#");
+                         $('#guitar-result .card-text').html(
+                             'The best fit:<br> 11, 15, 20, 36, 48, 60'
+                         );
+                         $('#guitar-result .card-img-top').attr('src','img/ernie-ball-11.png');
+                         $('#card-link').attr('href','#');
+                    break;
+                }
+            });
+            
+        });
+      </script>  
+      
+  </body>
+</html>
