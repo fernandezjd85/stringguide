@@ -1,30 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <link rel="icon" href="./img/favicon/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="./img/favicon/favicon-196x196.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link href="https://bootswatch.com/4/darkly/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>String Guide!</title>
+    <title>Guitar String Guide V2</title>
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron mt-3">
-            <h1>The Guide to String Gauges!</h1>
-            <hr>
-            <p class="lead">This is a simple app to help guitarist and bass players that want to play on different standard tunning to select which strings to buy. I hope this helps You. Enjoy it!!</p>
-            <hr>
-            <h2>Guitar</h2>
-          
-            <form>
+      <div class="row mb-3">
+
+        <header className="App-header">
+          <h1>String Guitar Guide</h1>  
+          <p>This is a simple app to help guitarist and bass players 
+             that want to play on different standard tunning to select 
+             which strings to buy. I hope this helps You. Enjoy it!!</p>      
+        </header>
+
+      </div>
+    
+    <div class="row mb-3">
+
+        <div class="col-lg-4"></div>
+
+        <div class="col-lg-4">
+          <div class="card mb-3">
+              <h4 id="tunning" class="card-header">E Standard: E-A-D-G-B-e</h4>
+                <div class="card-body">
+                  <h5 id="title" class="card-title">Regular Slinky</h5>
+                  <img id="front-image" src="img/ernie-ball-10-46.jpg" alt="ernie-ball-10-46" width="100%"/>
+                </div>                
+                <div class="card-body">
+                  <p class="card-text">
+                    <h6 class="card-subtitle text-muted">The best fit:</h6>
+                    <p id="description">10-46 <small>(Nomal Tension)</small><br>9-42 <small>(Loose Fell)</small></p>                        
+                  </p>
+                  <div class="card-body">
+                    <a href="#" class="btn btn-success card-link" id="buy-link" target="_blank"><i class="fa fa-amazon"></i> Buy</a>
+                </div>
+                </div>
+          </div>
+
+           <form>
              <div class="form-group">
             <label for="select-guitar">Tuning:</label>
                 <select class="form-control" id="select-guitar">
-                  <option value=""> </option>
-                  <option value="G1">E Standard</option>
+                  <option value="G1" selected>E Standard</option>
                   <option value="G2">Drop D</option>
                   <option value="G3">Eb Standard</option>
                   <option value="G4">Drop C#</option>
@@ -35,145 +69,25 @@
                 </select>
             </div>
             </form>      
-          
-          <div id="guitar-result">
-            <div class="card">
-              <img class="card-img-top" src="" alt=" Strings Image">
-              <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text">
-                </p>
-                <a href="#" class="btn btn-primary" id="card-link" target="_blank"> Buy on <i class="fa fa-amazon"></i></a>
-              </div>
-            </div>
+
+        </div>
+
+        <div class="col-lg-4"></div>
+      </div>
+      <footer id="footer">
+        <div class="row">
+          <div class="col-lg-12">            
+            <p>Made by <a href="https://fernandezjd-info/">Julian Fernandez</a>.</p>
+            <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/master/LICENSE">MIT License</a>.</p>
+            <p>Based on <a href="https://getbootstrap.com/" rel="nofollow">Bootstrap and ReacjJS | Guitar String Guide Project - 2021</a>. </p>
+
           </div>
-         <!-- 
-          <hr>
-            <h2>Bass</h2>
-          
-            <form>
-             <div class="form-group">
-            <label for="select-bass">Tuning:</label>
-                <select class="form-control" id="select-bass">
-                  <option value="B1">E Standard, Drop D</option>
-                  <option value="B1">Eb Standard, Drop C#</option>
-                  <option value="B1">D Standard, Drop C</option>
-                  <option value="B1">Drop B</option>
-                </select>
-            </div>
-            </form>    
-          
-          <div id="bass-result"></div>
-        -->
-      </div>
-      
-    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a href="http://fernandezjd.info">Develop by Julian Fernandez</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.youtube.com/watch?v=UkG8Ga9aFfo">Information taken from this video</a>
-          </li>
-            <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/fernandezjd85/">Folow me on <i class="fa fa-instagram"></i></a>
-          </li>
-            <li class="nav-item">
-            <a class="nav-link" href="https://www.facebook.com/fernandezjd85">Folow me on <i class="fa fa-facebook-official"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.twitter.com/fernandezjd85/">Folow me on <i class="fa fa-twitter"></i></a>
-          </li>
-        </ul>
-      </div>
-    </nav>  
-      
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-      
-        <script>
-        $( document ).ready(function() {
-            
-            $('#select-guitar').on('change', function() {
-                
-                switch(this.value){
-                    case 'G1':
-                         $('#guitar-result .card-title').html("E-A-D-G-B-e");
-                         $('#guitar-result .card-text').html(
-                             'The best fit:<br> 10-46 <small>(Nomal Tension)</small><br>9-42 <small>(Loose Fell)</small>'
-                         );
-                        $('#guitar-result .card-img-top').attr('src','img/ernie-ball-10-46.jpg');
-                        $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Regular-Slinky-Nickel/dp/B00CAV0TRQ/');
-                    break;
-                    case 'G2':
-                         $('#guitar-result .card-title').html("D-A-D-G-B-e");
-                         $('#guitar-result .card-text').html(
-                             'The best fit:<br> 10-52 <small>(Light Top Heavy Bottom)</small>'
-                         );
-                        $('#guitar-result .card-img-top').attr('src','img/ernie-ball-10-52.jpg');
-                        $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Skinny-Bottom-Nickel/dp/B0002PBS68/');
-                    break;
-                    case 'G3':
-                         $('#guitar-result .card-title').html("Eb-Ab-Db-Gb-Bb-eb");
-                         $('#guitar-result .card-text').html(
-                             'The best fit:<br> 10-52 <small>(Tighter Feel On Low Strings)</small>'
-                         );
-                        $('#guitar-result .card-img-top').attr('src','img/ernie-ball-10-52.jpg');
-                        $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Skinny-Bottom-Nickel/dp/B0002PBS68/');
-                    break;
-                    case 'G4':
-                         $('#guitar-result .card-title').html("C#-Ab-Db-Gb-Bb-eb");
-                         $('#guitar-result .card-text').html(
-                             'The best fit:<br> 11-48 +52<small>(Normal Tension)</small>'
-                         );
-                        $('#guitar-result .card-img-top').attr('src','img/ernie-ball-11-48.jpg');
-                        $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Power-Slinky-Nickel/dp/B001NI4M1Q/');
-                    break;
-                    case 'G5':
-                         $('#guitar-result .card-title').html("D-G-C-F-A-D");
-                         $('#guitar-result .card-text').html(
-                             'The best fit:<br> 11-54<small>(Higher Tension)</small>'
-                         );
-                         $('#guitar-result .card-img-top').attr('src','img/ernie-ball-11-54.jpg');
-                        $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Beefy-Slinky-Nickel/dp/B0002E1J5E/');
-                    break;
-                    case 'G6':
-                         $('#guitar-result .card-title').html("C-F-A#-D#-G-C");
-                         $('#guitar-result .card-text').html(
-                             'The best fit:<br> 12-56<small>(Higher Tension)</small><br>11-54 <small>(Loose Fell)</small>'
-                         );
-                         $('#guitar-result .card-img-top').attr('src','img/ernie-ball-12-56.jpg');
-                         $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Slinky-Nickel-Wound/dp/B0002E1J3Q/');
-                    break;
-                    case 'G7':
-                         $('#guitar-result .card-title').html("C-G-C-F-A-D");
-                         $('#guitar-result .card-text').html(
-                             'The best fit:<br> 11-54 +56<small>(Normal Tension)</small>'
-                         );
-                         $('#guitar-result .card-img-top').attr('src','img/ernie-ball-11-54.jpg');
-                         $('#card-link').attr('href','https://www.amazon.com/Ernie-Ball-Beefy-Slinky-Nickel/dp/B0002E1J5E/');
-                    break;
-                    case 'G8':
-                         $('#guitar-result .card-title').html("B-F#-B-E-G#-C#");
-                         $('#guitar-result .card-text').html(
-                             'The best fit:<br> 11, 15, 20, 36, 48, 60'
-                         );
-                         $('#guitar-result .card-img-top').attr('src','img/ernie-ball-11.png');
-                         $('#card-link').attr('href','#');
-                    break;
-                }
-            });
-            
-        });
-      </script>  
-      
+        </div>
+      </footer>
+    </div>
+
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="./app.js"></script>
+
   </body>
 </html>
