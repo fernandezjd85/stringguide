@@ -8,6 +8,7 @@ $( document ).ready(function() {
                      '10-46 <small>(Nomal Tension)</small><br>9-42 <small>(Loose Fell)</small>'
                  );
                 $('#front-image').attr('src','img/ernie-ball-10-46.jpg');
+                $('#front-image').attr('alt','ernie-ball-10-46');
                 $('#buy-link').attr('href','https://www.amazon.com/Ernie-Ball-Regular-Slinky-Nickel/dp/B00CAV0TRQ/');
             break;
             case 'G2':
@@ -16,6 +17,7 @@ $( document ).ready(function() {
                      '10-52 <small>(Light Top Heavy Bottom)</small>'
                  );
                 $('#front-image').attr('src','img/ernie-ball-10-52.jpg');
+                $('#front-image').attr('alt','ernie-ball-10-52');
                 $('#buy-link').attr('href','https://www.amazon.com/Ernie-Ball-Skinny-Bottom-Nickel/dp/B0002PBS68/');
             break;
             case 'G3':
@@ -24,6 +26,7 @@ $( document ).ready(function() {
                      '10-52 <small>(Tighter Feel On Low Strings)</small>'
                  );
                 $('#front-image').attr('src','img/ernie-ball-10-52.jpg');
+                $('#front-image').attr('alt','ernie-ball-10-52');
                 $('#buy-link').attr('href','https://www.amazon.com/Ernie-Ball-Skinny-Bottom-Nickel/dp/B0002PBS68/');
             break;
             case 'G4':
@@ -32,6 +35,7 @@ $( document ).ready(function() {
                      '11-48 +52<small>(Normal Tension)</small>'
                  );
                 $('#front-image').attr('src','img/ernie-ball-11-48.jpg');
+                $('#front-image').attr('alt','ernie-ball-11-48');
                 $('#buy-link').attr('href','https://www.amazon.com/Ernie-Ball-Power-Slinky-Nickel/dp/B001NI4M1Q/');
             break;
             case 'G5':
@@ -40,6 +44,7 @@ $( document ).ready(function() {
                      '11-54<small>(Higher Tension)</small>'
                  );
                  $('#front-image').attr('src','img/ernie-ball-11-54.jpg');
+                 $('#front-image').attr('alt','ernie-ball-11-54');
                 $('#buy-link').attr('href','https://www.amazon.com/Ernie-Ball-Beefy-Slinky-Nickel/dp/B0002E1J5E/');
             break;
             case 'G6':
@@ -48,6 +53,7 @@ $( document ).ready(function() {
                      '12-56<small>(Higher Tension)</small><br>11-54 <small>(Loose Fell)</small>'
                  );
                  $('#front-image').attr('src','img/ernie-ball-12-56.jpg');
+                 $('#front-image').attr('alt','img/ernie-ball-12-56');
                  $('#buy-link').attr('href','https://www.amazon.com/Ernie-Ball-Slinky-Nickel-Wound/dp/B0002E1J3Q/');
             break;
             case 'G7':
@@ -56,6 +62,7 @@ $( document ).ready(function() {
                      '11-54 +56<small>(Normal Tension)</small>'
                  );
                  $('#front-image').attr('src','img/ernie-ball-11-54.jpg');
+                 $('#front-image').attr('alt','img/ernie-ball-11-54');
                  $('#buy-link').attr('href','https://www.amazon.com/Ernie-Ball-Beefy-Slinky-Nickel/dp/B0002E1J5E/');
             break;
             case 'G8':
@@ -64,6 +71,7 @@ $( document ).ready(function() {
                      '11, 15, 20, 36, 48, 60'
                  );
                  $('#front-image').attr('src','img/ernie-ball-11.png');
+                 $('#front-image').attr('alt','ernie-ball-11');
                  $('#buy-link').attr('href','#');
             break;
         }
